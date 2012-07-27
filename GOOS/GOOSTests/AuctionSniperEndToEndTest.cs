@@ -20,7 +20,7 @@ namespace GOOSTests
         }
 
         [Test]
-        public void SinperJoinsAuctionUntilAuctionCloses()
+        public void SniperJoinsAuctionUntilAuctionCloses()
         {
             auction.StartSellingItem();
             application.StartBiddingIn(auction);
