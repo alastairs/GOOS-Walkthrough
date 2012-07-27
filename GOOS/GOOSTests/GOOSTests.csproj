@@ -31,6 +31,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bricks">
+      <HintPath>..\packages\White.0.2.0\lib\net35\Bricks.dll</HintPath>
+    </Reference>
+    <Reference Include="Bricks.RuntimeFramework">
+      <HintPath>..\packages\White.0.2.0\lib\net35\Bricks.RuntimeFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.1.1.0\lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy2">
+      <HintPath>..\packages\Castle.DynamicProxy.2.1.0\lib\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.0.12054\lib\nunit.framework.dll</HintPath>
     </Reference>
@@ -41,13 +56,53 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="White.Core">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="White.CustomControls">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.CustomControls.dll</HintPath>
+    </Reference>
+    <Reference Include="White.CustomControls.Peers">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.CustomControls.Peers.dll</HintPath>
+    </Reference>
+    <Reference Include="White.CustomControls.Peers.Silverlight">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.CustomControls.Peers.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="White.CustomControls.Silverlight">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.CustomControls.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="White.NUnit">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.NUnit.dll</HintPath>
+    </Reference>
+    <Reference Include="White.Recorder">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.Recorder.exe</HintPath>
+    </Reference>
+    <Reference Include="White.Reporting">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="White.Repository">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="White.WebBrowser">
+      <HintPath>..\packages\White.0.2.0\lib\net35\White.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="Xstream.Core">
+      <HintPath>..\packages\xstream-dot-net.1.0.3552.35177\lib\net20\Xstream.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationRunner.cs" />
     <Compile Include="AuctionSniperEndToEndTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GOOS\GOOS.csproj">
+      <Project>{A8D2090A-A27C-443C-8AC0-02B69E4D7A54}</Project>
+      <Name>GOOS</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

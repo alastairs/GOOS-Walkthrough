@@ -37,24 +37,6 @@ namespace GOOSTests
         }
     }
 
-    internal class ApplicationRunner
-    {
-        public void StartBiddingIn(FakeAuctionServer auction)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ShowsSniperHasLostAuction()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Stop()
-        {
-            throw new NotImplementedException();
-        }
-    }
-
     internal class FakeAuctionServer
     {
         public FakeAuctionServer(string item)
@@ -78,6 +60,11 @@ namespace GOOSTests
         }
 
         public void Stop()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetItemId()
         {
             throw new NotImplementedException();
         }
