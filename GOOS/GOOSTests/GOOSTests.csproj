@@ -44,21 +44,27 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="White.Core, Version=0.2.1.0, Culture=neutral, PublicKeyToken=2672efbf3e161801, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\white\White.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationRunner.cs" />
+    <Compile Include="AuctionSniperDriver.cs" />
     <Compile Include="AuctionSniperEndToEndTest.cs" />
+    <Compile Include="FakeAuctionServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <Compile Include="SingleMessageListener.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GOOS\GOOS.csproj">
       <Project>{A8D2090A-A27C-443C-8AC0-02B69E4D7A54}</Project>
       <Name>GOOS</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
