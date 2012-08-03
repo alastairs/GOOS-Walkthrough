@@ -13,13 +13,16 @@ namespace GOOSTests
         private const string StatusLost = "Lost";
         private AuctionSniperDriver driver;
 
+        private readonly ManualResetEvent applicationLaunchEvent = new ManualResetEvent(false);
+
         public void StartBiddingIn(FakeAuctionServer auction)
         {
             ThreadStart threadStart = () => Run(auction);
-            Thread thread = new Thread(threadStart);
-            thread.IsBackground = true;
+            var thread = new Thread(threadStart) {IsBackground = true};
             thread.Start();
-            driver = new AuctionSniperDriver(1000);
+
+            applicationLaunchEvent.WaitOne(TimeSpan.FromSeconds(1));
+            driver = new AuctionSniperDriver(1000); 
             driver.ShowsSniperStatus(StatusJoining);
         }
 
@@ -28,6 +31,7 @@ namespace GOOSTests
             try
             {
                 Program.Main(XmppHostname, SniperId, SniperPassword, auction.GetItemId());
+                applicationLaunchEvent.Set();
             }
             catch (Exception e)
             {
@@ -46,24 +50,6 @@ namespace GOOSTests
             {
                 driver.Dispose();
             }
-        }
-    }
-
-    internal class AuctionSniperDriver
-    {
-        public AuctionSniperDriver(int timeoutMillis)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ShowsSniperStatus(string status)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
         }
     }
 }

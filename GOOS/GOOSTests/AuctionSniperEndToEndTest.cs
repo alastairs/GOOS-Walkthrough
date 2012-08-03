@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
@@ -34,39 +33,6 @@ namespace GOOSTests
         {
             auction.Stop();
             application.Stop();
-        }
-    }
-
-    internal class FakeAuctionServer
-    {
-        public FakeAuctionServer(string item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void StartSellingItem()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void HasReceivedJoinRequestFromSniper()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void AnnounceClosed()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Stop()
-        {
-            throw new NotImplementedException();
-        }
-
-        public string GetItemId()
-        {
-            throw new NotImplementedException();
         }
     }
 }
