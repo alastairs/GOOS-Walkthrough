@@ -31,22 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bricks">
-      <HintPath>..\packages\White.0.2.0\lib\net35\Bricks.dll</HintPath>
+    <Reference Include="agsXMPP">
+      <HintPath>..\..\lib\agsXMPP.dll</HintPath>
     </Reference>
-    <Reference Include="Bricks.RuntimeFramework">
-      <HintPath>..\packages\White.0.2.0\lib\net35\Bricks.RuntimeFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="Castle.Core">
-      <HintPath>..\packages\Castle.Core.1.1.0\lib\Castle.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Castle.DynamicProxy2">
-      <HintPath>..\packages\Castle.DynamicProxy.2.1.0\lib\Castle.DynamicProxy2.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
+    <Reference Include="nunit.framework, Version=2.6.0.12051, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.2.6.0.12054\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -56,38 +44,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="White.Core">
-      <HintPath>..\packages\White.0.2.0\lib\net35\White.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="White.CustomControls">
-      <HintPath>..\packages\White.0.2.0\lib\net35\White.CustomControls.dll</HintPath>
-    </Reference>
-    <Reference Include="White.CustomControls.Peers">
-      <HintPath>..\packages\White.0.2.0\lib\net35\White.CustomControls.Peers.dll</HintPath>
-    </Reference>
-    <Reference Include="White.CustomControls.Peers.Silverlight">
-      <HintPath>..\packages\White.0.2.0\lib\net35\White.CustomControls.Peers.Silverlight.dll</HintPath>
-    </Reference>
-    <Reference Include="White.CustomControls.Silverlight">
-      <HintPath>..\packages\White.0.2.0\lib\net35\White.CustomControls.Silverlight.dll</HintPath>
-    </Reference>
-    <Reference Include="White.NUnit">
-      <HintPath>..\packages\White.0.2.0\lib\net35\White.NUnit.dll</HintPath>
-    </Reference>
-    <Reference Include="White.Recorder">
-      <HintPath>..\packages\White.0.2.0\lib\net35\White.Recorder.exe</HintPath>
-    </Reference>
-    <Reference Include="White.Reporting">
-      <HintPath>..\packages\White.0.2.0\lib\net35\White.Reporting.dll</HintPath>
-    </Reference>
-    <Reference Include="White.Repository">
-      <HintPath>..\packages\White.0.2.0\lib\net35\White.Repository.dll</HintPath>
-    </Reference>
-    <Reference Include="White.WebBrowser">
-      <HintPath>..\packages\White.0.2.0\lib\net35\White.WebBrowser.dll</HintPath>
-    </Reference>
-    <Reference Include="Xstream.Core">
-      <HintPath>..\packages\xstream-dot-net.1.0.3552.35177\lib\net20\Xstream.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
