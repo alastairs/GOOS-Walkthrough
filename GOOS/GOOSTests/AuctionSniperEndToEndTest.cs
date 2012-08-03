@@ -9,8 +9,8 @@ namespace GOOSTests
     [TestFixture]
     public class AuctionSniperEndToEndTest
     {
-        private  FakeAuctionServer auction;
-        private  ApplicationRunner application;
+        private FakeAuctionServer auction;
+        private ApplicationRunner application;
 
         [SetUp]
         public void SetUp()
