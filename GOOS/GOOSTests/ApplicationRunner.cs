@@ -6,7 +6,7 @@ namespace GOOSTests
 {
     internal class ApplicationRunner
     {
-        private const string XmppHostname = "hostname";
+        private const string XmppHostname = "localhost";
         private const string SniperId = "sniper";
         private const string SniperPassword = "sniper";
         private const string StatusJoining = "Joining";

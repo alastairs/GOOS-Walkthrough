@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using agsXMPP;
 using agsXMPP.protocol.client;
 
@@ -16,6 +17,8 @@ namespace GOOSTests
         private string currentChat;
         private readonly SingleMessageListener messageListener = new SingleMessageListener();
 
+        private readonly ManualResetEvent loginEvent = new ManualResetEvent(false);
+
         public FakeAuctionServer(string item)
         {
             this.itemId = item;
@@ -24,18 +27,26 @@ namespace GOOSTests
 
         public void StartSellingItem()
         {
+            connection.OnLogin += ConnectionOnOnLogin;
             connection.Open(string.Format(ItemIdAsLogin, itemId), AuctionPassword, AuctionResource);
             connection.OnMessage += messageListener.OnMessage;
+            loginEvent.WaitOne(TimeSpan.FromSeconds(5));
+        }
+
+        private void ConnectionOnOnLogin(object sender)
+        {
+            loginEvent.Set();
         }
 
         public void HasReceivedJoinRequestFromSniper()
         {
-            throw new NotImplementedException();
+            messageListener.ReceivesAMessage();
         }
 
         public void AnnounceClosed()
         {
-            throw new NotImplementedException();
+            //currentChat.sendMessage(new Message());
+            connection.Send(new Message());
         }
 
         public void Stop()

@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using NUnit.Framework;
 using White.Core;
 using White.Core.UIItems;
@@ -8,7 +9,7 @@ namespace GOOSTests
 {
     internal class AuctionSniperDriver : IDisposable
     {
-        private const string ProcessName = "GOOS.vshost";
+        private static readonly string ProcessName = Process.GetCurrentProcess().ProcessName;
 
         private readonly Window window;
         private readonly Application application;
@@ -16,10 +17,10 @@ namespace GOOSTests
         public AuctionSniperDriver(int timeoutMillis)
         {
             application = Application.Attach(ProcessName);
-            
+
             window = application.GetWindow("Form1");
 
-            Assert.That(window.DisplayState, Is.EqualTo(DisplayState.Maximized));
+            Assert.That(window.DisplayState, Is.EqualTo(DisplayState.Restored));
         }
 
         public void ShowsSniperStatus(string status)

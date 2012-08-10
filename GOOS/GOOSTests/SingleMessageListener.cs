@@ -6,7 +6,7 @@ using agsXMPP.protocol.client;
 
 namespace GOOSTests
 {
-    class SingleMessageListener
+    class SingleMessageListener 
     {
         private readonly ConcurrentQueue<Message> messages = new ConcurrentQueue<Message>();
         private readonly ManualResetEvent messageEvent = new ManualResetEvent(false);
@@ -27,5 +27,6 @@ namespace GOOSTests
             messageEvent.Reset();
             Assert.AreNotEqual(0, messages.Count);
         }
+
     }
 }
